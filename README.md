@@ -24,7 +24,7 @@
 
 ## ¿Qué es `iperf3`?
 
-Es una herramienta de línea de comandos que sirve para medir la velocidad de paquetes de un tráfico de red entre otros aspectos importantes que se pueden medir.
+Es una herramienta de línea de comandos que sirve para medir la velocidad de paquetes, el ancho de banda la pérdida de paquetes, y otros aspectos importantes del tráfico de red.
 
 Se utiliza entre dos computadoras 
 
