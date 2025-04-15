@@ -90,3 +90,54 @@ Este comando inicia a la PC como servidor, hace que la computadora espere conexi
 ![image](https://github.com/user-attachments/assets/614564b7-50a5-4ab0-9133-4dc977268d54)
 
 
+---
+
+## 5. Pruebas como cliente hacia el servidor propuesto en clase
+
+### Envio de paquetes TCP mediante *iPerf3*. 
+
+![image](https://github.com/user-attachments/assets/0965ead1-a29f-4ab5-9f8a-0d0cddf11dba)
+
+El tamaño de segmento TCP se ajusta según las opciones del sistema operativo y la configuración interna de iPerf.  
+Si no se especifica la duración de la prueba (por ejemplo, con `-t 5` para 5 segundos), **iPerf3** utiliza un valor por defecto de **10 segundos**.
+
+### Parámetros del reporte
+
+- **Interval**: Indica el rango de tiempo (en segundos) durante el cual se toman las mediciones parciales.  
+  iPerf3 realiza mediciones en intervalos de **1 segundo** por defecto.
+
+- **Transfer**: Muestra la cantidad total de datos transferidos en cada intervalo (expresado en MBytes, KBytes, etc.).
+
+- **Bitrate**: Representa la tasa media de transferencia de datos en ese intervalo.  
+  Se expresa comúnmente en **Mbits/sec** y también se conoce como *Throughput*.
+
+- **Retr**: Indica cuántas veces se retransmitieron segmentos TCP en ese intervalo.  
+  Un valor alto de **Retr** puede indicar problemas en la red, como **pérdida de paquetes** o **congestión**.
+
+- **Cwnd**: Corresponde a la *congestion window* (ventana de congestión) de TCP.  
+  Es un valor interno que limita la cantidad máxima de datos "en vuelo", es decir, enviados pero aún no reconocidos mediante ACK.
+
+### Trafico UDP usando *iPerf3* capturado mediante *WireShark*
+
+![image](https://github.com/user-attachments/assets/7c38ee46-6e57-4963-8094-ccb6ec92460d)
+
+---
+
+### Envio de paquetes TCP mediante *iPerf3*. 
+
+![image](https://github.com/user-attachments/assets/12aed5a4-ff46-43ee-ab64-663fbeb7f25e)
+
+En este caso, se debe utilizar `-u` para indicar que el protoclo de envio es mediante **UDP**. Con `-t` seleccionamos un tiempo de transmicion de 5 segundos y usando la directiva `-b` el bitrate por cada intervalo.
+
+### Parámetros del reporte
+
+ - **Total Datagrams**: Esta columna es específica de iPerf en modo UDP. Muestra la cantidad total de datagramas (paquetes UDP) enviados o recibidos en ese intervalo.
+ - **Metricas Finales**: Al final de la prueba (en la penúltima y última línea), iPerf3 muestra un resumen con métricas de UDP, que incluyen:
+   - Transfer: Cantidad total de datos transferidos durante toda la prueba.
+   - Bandwidth: El bitrate promedio total.
+   - Jitter: Variación en el tiempo de llegada de los paquetes (latencia variable).
+   - Lost/Total Datagrams: Cantidad de datagramas perdidos respecto al total enviados, y el porcentaje de pérdida.  
+
+### Trafico UDP usando *iPerf3* capturado mediante *WireShark*
+
+![image](https://github.com/user-attachments/assets/e51d32b0-a80f-45e0-acf1-0409dffcf3a1)
