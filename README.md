@@ -92,6 +92,13 @@ Este comando inicia a la PC como servidor, hace que la computadora espere conexi
 
 ---
 
+## 4. Conclusiones del trafico usando iperf  
+  - **Ancho de banda promedio (Bitrate):** Aproximadamente 4.8 Mbits/s.
+  - **Tiempo de duracion de la prueba:** 10 segundos.
+  - **Tamaño promedio de paquetes:** Por defecto, iperf3 en TCP utiliza un tamaño de ventana y va segmentando en paquetes (con un tamaño de segmento TCP cercano a 1460 bytes para la parte de datos).
+  - **Relacion entre los parámetros y la perdida de paquetes:** 
+---
+
 ## 5. Pruebas como cliente hacia el servidor propuesto en clase
 
 ### Envio de paquetes TCP mediante *iPerf3*. 
