@@ -85,7 +85,7 @@ Se utiliza entre dos computadoras
 
 ## 5. Pruebas como cliente hacia el servidor propuesto en clase
 
-Se enviaron paquetes TCP. El tamaño de los paquetes y el tiempo total de la prueba se definen por los valores por defecto de **iPerf3**.
+### Envio de paquetes TCP mediante *iPerf3*. 
 
 ![image](https://github.com/user-attachments/assets/0965ead1-a29f-4ab5-9f8a-0d0cddf11dba)
 
@@ -107,5 +107,30 @@ Si no se especifica la duración de la prueba (por ejemplo, con `-t 5` para 5 se
 
 - **Cwnd**: Corresponde a la *congestion window* (ventana de congestión) de TCP.  
   Es un valor interno que limita la cantidad máxima de datos "en vuelo", es decir, enviados pero aún no reconocidos mediante ACK.
+
+### Trafico UDP usando *iPerf3* capturado mediante *WireShark*
+
+![image](https://github.com/user-attachments/assets/7c38ee46-6e57-4963-8094-ccb6ec92460d)
+
+---
+
+### Envio de paquetes UDP mediante *iPerf3*. 
+
+![image](https://github.com/user-attachments/assets/12aed5a4-ff46-43ee-ab64-663fbeb7f25e)
+
+En este caso, se debe utilizar `-u` para indicar que el protoclo de envio es mediante **UDP**. Con `-t` seleccionamos un tiempo de transmicion de 5 segundos y usando la directiva `-b` el bitrate por cada intervalo.
+
+### Parámetros del reporte
+
+ - **Total Datagrams**: Esta columna es específica de iPerf en modo UDP. Muestra la cantidad total de datagramas (paquetes UDP) enviados o recibidos en ese intervalo.
+ - **Metricas Finales**: Al final de la prueba (en la penúltima y última línea), iPerf3 muestra un resumen con métricas de UDP, que incluyen:
+   - Transfer: Cantidad total de datos transferidos durante toda la prueba.
+   - Bandwidth: El bitrate promedio total.
+   - Jitter: Variación en el tiempo de llegada de los paquetes (latencia variable).
+   - Lost/Total Datagrams: Cantidad de datagramas perdidos respecto al total enviados, y el porcentaje de pérdida.  
+
+### Trafico UDP usando *iPerf3* capturado mediante *WireShark*
+
+![image](https://github.com/user-attachments/assets/e51d32b0-a80f-45e0-acf1-0409dffcf3a1)
 
 
