@@ -83,4 +83,29 @@ Se utiliza entre dos computadoras
 
 ---
 
+## 5. Pruebas como cliente hacia el servidor propuesto en clase
+
+Se enviaron paquetes TCP. El tamaño de los paquetes y el tiempo total de la prueba se definen por los valores por defecto de **iPerf3**.
+
+![image](https://github.com/user-attachments/assets/0965ead1-a29f-4ab5-9f8a-0d0cddf11dba)
+
+El tamaño de segmento TCP se ajusta según las opciones del sistema operativo y la configuración interna de iPerf.  
+Si no se especifica la duración de la prueba (por ejemplo, con `-t 5` para 5 segundos), **iPerf3** utiliza un valor por defecto de **10 segundos**.
+
+### Parámetros del reporte
+
+- **Interval**: Indica el rango de tiempo (en segundos) durante el cual se toman las mediciones parciales.  
+  iPerf3 realiza mediciones en intervalos de **1 segundo** por defecto.
+
+- **Transfer**: Muestra la cantidad total de datos transferidos en cada intervalo (expresado en MBytes, KBytes, etc.).
+
+- **Bitrate**: Representa la tasa media de transferencia de datos en ese intervalo.  
+  Se expresa comúnmente en **Mbits/sec** y también se conoce como *Throughput*.
+
+- **Retr**: Indica cuántas veces se retransmitieron segmentos TCP en ese intervalo.  
+  Un valor alto de **Retr** puede indicar problemas en la red, como **pérdida de paquetes** o **congestión**.
+
+- **Cwnd**: Corresponde a la *congestion window* (ventana de congestión) de TCP.  
+  Es un valor interno que limita la cantidad máxima de datos "en vuelo", es decir, enviados pero aún no reconocidos mediante ACK.
+
 
