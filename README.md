@@ -83,4 +83,10 @@ Se utiliza entre dos computadoras
 
 ---
 
+## 3 Consolas corriendo iperf
+
+Este comando inicia a la PC como servidor hace que la computadora espere conexiones desde otras, abre un puerto de escucha donde el cliente se puede conectar
+
+![image](https://github.com/user-attachments/assets/614564b7-50a5-4ab0-9133-4dc977268d54)
+
 
