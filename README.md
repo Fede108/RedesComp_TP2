@@ -22,6 +22,15 @@
 
 ## Resumen
 
+## ¿Qué es `iperf3`?
+
+Es una herramienta de línea de comandos que sirve para medir la velocidad de paquetes de un tráfico de red entre otros aspectos importantes que se pueden medir.
+
+Se utiliza entre dos computadoras 
+
+- Una actúa como servidor
+- Otra como cliente
+
 ## 2. Principales comandos de `iperf3` para pruebas de red con **TCP** y **UDP**
 
 - Protocolo (TCP vs UDP)
@@ -74,9 +83,4 @@
 
 ---
 
-## 🔁 Ejemplos de Comandos
 
-- **TCP básico** (duración de 10 segundos):
-
-  ```bash
-  iperf3 -c 192.168.1.10 -t 10
