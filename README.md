@@ -20,6 +20,10 @@
 
 **Información de contacto**:  _juan.manuel.ferrero@mi.unc.edu.ar_, _federico.cechich@mi.unc.edu.ar_, _ltrachta@mi.unc.edu.ar_ 
 
+# Introduccion
+
+En este trabajo práctico exploramos conceptos esenciales de rendimiento y enrutamiento en redes de computadoras, aplicando configuraciones estáticas y dinámicas sobre una circuito fisico compartido entre grupos, con múltiples rutas posibles. Con uso de herramientas como iperf3 y Wireshark, realizamos mediciones reales para analizar el comportamiento del tráfico bajo distintos escenarios y protocolos. Esta experiencia integró teoría y práctica, permitiendo evaluar parámetros como el ancho de banda, el tamaño de los paquetes, el tipo de protocolo, la congestión y la pérdida de datos.
+
 ## Resumen
 
 ## ¿Qué es `iperf3`?
@@ -149,3 +153,11 @@ En este caso, se debe utilizar `-u` para indicar que el protoclo de envio es med
 ### Trafico UDP usando *iPerf3* capturado mediante *WireShark*
 
 ![image](https://github.com/user-attachments/assets/e51d32b0-a80f-45e0-acf1-0409dffcf3a1)
+
+## Conclusión
+
+A partir de las pruebas realizadas, pudimos observar las diferencias clave entre los protocolos TCP y UDP en términos de comportamiento, confiabilidad y control de flujo. TCP se mostró eficiente en entornos donde se requiere integridad y orden en la transmisión de datos, gracias a su mecanismo de control de congestión, retransmisiones y ventana de congestión dinámica. Sin embargo, su rendimiento puede verse afectado por pérdidas o fluctuaciones, como se evidenció en las variaciones del parámetro cwnd y las retransmisiones (Retr).
+
+Por otro lado, UDP, al carecer de mecanismos de corrección de errores, ofrece un mayor rendimiento bruto en escenarios donde la velocidad es más importante que la fiabilidad, como en transmisiones multimedia o VoIP. Las pruebas con UDP mostraron un mayor control manual del bitrate (-b) y evidencia clara de posibles pérdidas o jitter, capturados también con Wireshark.
+
+En resumen, este trabajo permitió comparar de forma práctica el comportamiento real de TCP y UDP, reforzando la comprensión de sus usos ideales según el contexto. Las herramientas utilizadas facilitaron una evaluación detallada del tráfico y ayudaron a visualizar cómo distintas configuraciones afectan directamente la calidad de las comunicaciones en una red.
